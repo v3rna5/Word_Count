@@ -26,28 +26,26 @@ namespace WordCounter.Models
     {
       int wordCounter = 0;
       string newString = _inputString.ToUpper();
-      string newWord = _inputWord.ToUpper();
+      string inputWord = _inputWord.ToUpper();
       string [] stringArray = newString.Split(' ');
 
-      if (stringArray.Length <= 0 || newWord.Length <= 0)
+      if (stringArray.Length <= 0 || inputWord.Length <= 0)
       {
         wordCounter = 0;
         } else
         {
           for (int i = 0; i < stringArray.Length; i++)
           {
-            if (stringArray[i].IndexOf(newWord) != -1)
+            if (stringArray[i].IndexOf(inputWord) != -1)
             {
                Console.WriteLine(inputWord.Length);
                Console.WriteLine(stringArray[i].Length);
               if (stringArray[i].Contains(inputWord) && inputWord.Length == stringArray[i].Length)
 
               {
-                wordCounter += 0;
+                wordCounter += 1;
               }
-              {
-                wordCounter +=1;
-              }
+
             }
           }
         }
