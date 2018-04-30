@@ -38,7 +38,10 @@ namespace WordCounter.Models
           {
             if (stringArray[i].IndexOf(newWord) != -1)
             {
-              if (stringArray[i].Contains(newWord))
+               Console.WriteLine(inputWord.Length);
+               Console.WriteLine(stringArray[i].Length);
+              if (stringArray[i].Contains(inputWord) && inputWord.Length == stringArray[i].Length)
+
               {
                 wordCounter += 0;
               }
